@@ -6,6 +6,7 @@ const grid = document.getElementById(`grid`) //creo una costante dove inserisco 
 const formLevel = document.getElementById("level");
 
 let RandomArray = []
+let progress = 0
 
 function randomNumeber(min, max) {
 
@@ -42,12 +43,14 @@ function show() {
                 point.addEventListener('click', function colour() { //aggiungo una funzione che mi permetta di cambiare colore all'elemento quando lo clicco aggiungendogli una classe
                     point.classList.add(`bomb`) //gli aggiungo la classe (creata in css)
                     alert `game over`
+                    alert `hai indovintato ` + progress
                     location.reload();
                 });
             }
             point.classList.add(`listStyle`)
             point.addEventListener('click', function colour() { //aggiungo una funzione che mi permetta di cambiare colore all'elemento quando lo clicco aggiungendogli una classe
-                point.classList.add(`green`) //gli aggiungo la classe (creata in css)
+                point.classList.add(`green`)
+                progress++ //gli aggiungo la classe (creata in css)
             });
             number++ //incremento il mio contatore
         }
