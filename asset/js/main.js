@@ -25,6 +25,7 @@ function randomNumeber(min, max) {
 
 function show() {
     let level = document.forms[0].level.value;
+
     /* console.log(level);  */ //verifico se mi stampa correttamente
     if (level == `default`) { //creo un ciclo if che mi chieda che valore è stato selezionata
         grid.innerHTML = ' '; //inizializzo la grigia vuota
